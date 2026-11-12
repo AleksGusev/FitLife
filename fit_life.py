@@ -14,13 +14,17 @@ user_name = input('Как тебя зовут?\n')
 # 2. Сбор данных
 # Цикл while для определения возраста
 while True:
-    # Вынес переменную с запросом за конструкцию try/except, чтобы использовать введенное пользователем значение в except
+    # Вынес переменную с запросом за конструкцию try/except
+    # чтобы использовать введенное пользователем значение в except
     raw_user_age = input('Сколько тебе лет?\n')
     try:
         user_age = int(raw_user_age)
         break
     except ValueError:
-        print(f'Некорректное значение возраста - {raw_user_age}. Используй цифры.')
+        print(
+            f'Некорректное значение возраста - {raw_user_age}. '
+            'Используй цифры.'
+        )
 
 # Цикл while для определения веса
 while True:
@@ -29,7 +33,10 @@ while True:
         user_weight = float(raw_user_weight)
         break
     except ValueError:
-        print(f'Некорректное значение веса - {raw_user_weight}. Введи вес цифрами (например 80.5).')
+        print(
+            f'Некорректное значение веса - {raw_user_weight}. '
+            'Введи вес цифрами (например 80.5).'
+        )
 
 # Цикл while для определения роста
 while True:
@@ -42,7 +49,10 @@ while True:
             continue
         break
     except ValueError:
-        print(f'Некорректное значение роста - {raw_user_height}. Введи рост цифрами (например 1.75).')
+        print(
+            f'Некорректное значение роста - {raw_user_height}. '
+            'Введи рост цифрами (например 1.75).'
+        )
 
 
 # 3. Логика расчетов
